@@ -81,6 +81,9 @@
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="NPinyin">
+      <HintPath>..\..\..\..\Desktop\OneFlow\NPinyin.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -134,6 +137,14 @@
     <Compile Include="Commands\File\ManagePluginsCommand.cs" />
     <Compile Include="Commands\File\Plugin.cs" />
     <Compile Include="Commands\File\PluginsProvider.cs" />
+    <Compile Include="Commands\PageCMD\DeleteCurrentPage.cs" />
+    <Compile Include="Commands\PageCMD\PageMoveToDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\PageCMD\PageMoveToDialog.Designer.cs">
+      <DependentUpon>PageMoveToDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\PageCMD\PageMoveTo.cs" />
     <Compile Include="Commands\References\MapCommand.cs" />
     <Compile Include="Commands\References\MapDialog.cs">
       <SubType>Form</SubType>
@@ -711,6 +722,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Commands\Extras\InsertCellsDialog.resx">
       <DependentUpon>InsertCellsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commands\PageCMD\PageMoveToDialog.resx">
+      <DependentUpon>PageMoveToDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Commands\References\MapDialog.resx">
       <DependentUpon>MapDialog.cs</DependentUpon>

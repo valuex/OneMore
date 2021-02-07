@@ -261,5 +261,13 @@ namespace River.OneMoreAddIn
 
 		public async Task WordCountCmd(IRibbonControl control)
 			=> await factory.Run<WordCountCommand>();
+
+		// page manuplation
+		public async Task PageMoveToCmd(IRibbonControl control)
+			=> await factory.Run<PageExecuteCommand>();
+		
+		
+		
+		
 	}
 }

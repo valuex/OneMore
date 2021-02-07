@@ -25,6 +25,7 @@ namespace River.OneMoreAddIn
 		AltShift = 5,
 		ControlAlt = 3,
 		ControlAltShift = 7,
-		ControlShift = 6
+		ControlShift = 6,
+		WinControlAltShift = 15
 	}
 }

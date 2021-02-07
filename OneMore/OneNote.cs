@@ -548,7 +548,7 @@ namespace River.OneMoreAddIn
 
 
 		/// <summary>
-		/// Gest the specified section and its child page hierarchy
+		/// Get the specified section and its child page hierarchy
 		/// </summary>
 		/// <returns>A Section element with Page children</returns>
 		public XElement GetSection(string id)
@@ -565,6 +565,23 @@ namespace River.OneMoreAddIn
 			return null;
 		}
 
+		/// <summary>
+		/// Get the specified hierarchy by inputting id
+		/// </summary>
+		/// <returns>A Section element with Page children</returns>
+		public XElement GetObj(string id)
+		{
+			if (!string.IsNullOrEmpty(id))
+			{
+				onenote.GetHierarchy(id, HierarchyScope.hsPages, out var xml, XMLSchema.xs2013);
+				if (!string.IsNullOrEmpty(xml))
+				{
+					return XElement.Parse(xml);
+				}
+			}
+
+			return null;
+		}
 
 
 		// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -812,6 +829,11 @@ namespace River.OneMoreAddIn
 					onenote.NavigateTo(uri);
 				});
 			}
+		}
+
+		public void NavigateToID(string ObjID)
+		{	
+			onenote.NavigateTo(ObjID);
 		}
 
 

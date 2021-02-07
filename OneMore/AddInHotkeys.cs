@@ -112,6 +112,26 @@ namespace River.OneMoreAddIn
 
 			HotkeyManager.RegisterHotKey(async () => await factory.Run<ApplyStyleCommand>(9),
 				Keys.D9, Hotmods.ControlAltShift);
+
+			// page manuplation
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("move"),
+				Keys.V, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("goto"),
+				Keys.G, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("merge"),
+				Keys.M, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("del"),
+				Keys.Delete, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("LevelLoop"),
+				Keys.S, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("NewPageBelow"),
+				Keys.I, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("NewPageAtBottom"),
+				Keys.A, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("MovePageUp"),
+				Keys.PageUp, Hotmods.WinControlAltShift);
+			HotkeyManager.RegisterHotKey(async () => await factory.Run<PageExecuteCommand>("MovePageDown"),
+				Keys.PageDown, Hotmods.WinControlAltShift);
 		}
 	}
 }
